@@ -1,5 +1,5 @@
 // counter.component.ts
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 
 @Component({
   selector: 'counter',
@@ -37,10 +37,11 @@ import {Component} from 'angular2/core';
         </button>
       </div>
     </div>
-  `
+  `,
+   inputs: ['counterValue']
 })
 export class CounterComponent {
-  public counterValue:number = 0;
+  public counterValue = 0;
   increment() {
     this.counterValue++;
   }

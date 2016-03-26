@@ -11,7 +11,7 @@ import {CounterComponent} from './counter.component';
   `],
   template: `
     <div class="app">
-      <counter></counter>
+      <counter [counterValue]="myValue"></counter>
     </div>
   `,
   directives: [
@@ -19,5 +19,5 @@ import {CounterComponent} from './counter.component';
   ]
 })
 export class AppComponent {
-
+       public myValue:number = 2;
 }
